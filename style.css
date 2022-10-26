@@ -1,0 +1,499 @@
+*
+{
+    padding: 0; 
+    margin: 0;
+}
+
+body
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgb(75, 75, 75);
+}
+
+::-webkit-scrollbar 
+{
+    width: 1.5vmin;
+    background-image: linear-gradient(45deg,red,blue,yellow,green);
+    background-size: auto 300%;
+    background-position: top;
+    border: 0.25vmin solid black;
+}
+
+::-webkit-scrollbar:hover
+{
+    transition: 2s;
+    background-position: bottom;
+}
+
+
+::-webkit-scrollbar-thumb
+{
+    background: rgba(255, 255, 255,1);
+    border: 0.25vmin solid black;
+}
+
+::-webkit-scrollbar-thumb:hover
+{
+    background: rgba(255, 255, 255,0.5);
+}
+
+html
+{
+    width: 100%;
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+a, p, h6
+{
+    font-size: 2vmin;
+}
+
+h5
+{
+    font-size: 2.5vmin;
+}
+
+h4
+{
+    font-size: 3vmin;
+}
+
+h3
+{
+    font-size: 3.5vmin;
+}
+
+h2
+{
+    font-size: 4vmin;
+}
+
+h1
+{
+    font-size: 5vmin;
+}
+
+header
+{
+    width: 100%;
+    height: 10vmin;
+    background-color: rgb(33, 33, 33);
+    position: fixed;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    z-index: 10;
+    border-bottom: 0.2vmin solid white;
+    border-top: 0.2vmin solid white;
+}
+
+footer
+{
+    width: 100%;
+    height: 10vmin;
+    background-color: rgb(33, 33, 33);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-top: 0.2vmin solid white;
+    border-bottom: 0.2vmin solid white;
+}
+
+header img
+{
+    height: 6vmin;
+    width: 6vmin;
+    margin-left: 6vmin;
+    transition: 1s;
+    animation: logo 2s;
+    animation-iteration-count: 1;
+}
+
+@keyframes logo
+{
+    from
+    {
+        transform: translateX(-20vmin);
+    }
+    to
+    {
+        transform: translateX(0vmin);
+    }
+}
+
+header img:hover
+{
+    transform: scale(1.3,1.3);
+}
+
+nav
+{
+    margin-right: 3vmin;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+nav > a
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1vmin;
+    width: 12vmin;
+    height: 6vmin;
+    margin-left: 2vmin;
+    border: 0.2vmin solid rgb(33, 33, 33);
+    transition: 1s;
+    color: white;
+    text-decoration: none;
+}
+
+nav > a:hover
+{
+    border: 0.2vmin solid white;
+}
+
+section
+{
+    width: 100%;
+    height: 150vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+#home
+{
+    padding-top: 15vmin;
+}
+
+/* home */
+
+#home > div
+{
+    width: 64vw;
+    height: 33vh;
+    border: 0.5vmin solid white;
+    display: grid;
+    grid-template-columns: 16vw 16vw 16vw 16vw;
+    grid-template-rows: 11vh 11vh 11vh;
+}
+
+#home > div > div
+{
+    margin: 0.5vh 0.5vw;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-size: 5vmin;
+    transition: 2s;
+}
+
+#home > div > div:hover
+{
+    background: rgb(0, 110, 255);
+    color: white;
+}
+
+/* section-1 */
+
+#section-1 > div
+{
+    width: 64vw;
+    height: 57vh;
+    border: 0.5vmin solid white;
+    display: grid;
+    grid-template-areas: "post-1 post-1 post-2 post-3"  
+                       "post-4 post-5 post-2 post-6"  
+                       "post-4 post-7 post-7 post-7"; 
+    grid-template-columns: repeat(4, 16vw);
+    grid-template-rows: repeat(3, 19vh);
+}
+
+#section-1 > div > div
+{
+    margin: 0.5vh 0.5vw;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: black;
+    transition: 2s;
+}
+
+#section-1 > div > div > img
+{
+    width: 6vmin;
+    height: 6vmin;
+}
+
+#section-1 > div > div > p
+{
+    font-size: 1.6vmin;
+    text-align: center;
+    margin: 1vh 1vw;
+}
+
+#section-1 > div > div:hover
+{
+    background: rgb(255, 0, 55);
+    color: white;
+}
+
+.post-1
+{
+    grid-area: post-1;
+}
+
+.post-2
+{
+    grid-area: post-2;
+}
+
+.post-3
+{
+    grid-area: post-3;
+}
+
+.post-4
+{
+    grid-area: post-4;
+}
+
+.post-5
+{
+    grid-area: post-5;
+}
+
+.post-6
+{
+    grid-area: post-6;
+}
+
+.post-7
+{
+    grid-area: post-7;
+}
+
+/* section-2 */
+
+#section-2 > div
+{
+    margin: 3vh 0vmin;
+    width: 72vw;
+    height: 36vh;
+    display: grid;
+    grid-template-areas: "card-1 card-2 card-3 card-4"; 
+    grid-template-columns: repeat(4, 18vw);
+    grid-template-rows: 36vmin;
+}
+
+#section-2 > div > div
+{
+    margin: 0.5vh 0.5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    transition: 2s;
+    border-radius: 2vmin;
+    background-size: 300%;
+    background-position: left;
+    transition: 2s;
+    box-shadow: 0 0 1vmin 0.4vmin rgba(0,0,0,0.7);
+}
+
+#section-2 > div > div > h1
+{
+    font-size: 10vmin;
+    color: rgba(0, 0, 0,0.3);
+}
+
+#section-2 > div > div > h2
+{
+    font-size: 2.5vmin;
+}
+
+#section-2 > div > div > p
+{
+    text-align: center;
+    font-size: 1.5vmin;
+    margin: 0 1vw;
+}
+
+.card1
+{
+    grid-area: card-1;
+    background: linear-gradient(45deg, rgb(255, 0, 0),rgb(255, 158, 158),rgb(124, 77, 77),rgb(80, 11, 11));
+}
+
+.card2
+{
+    grid-area: card-2;
+    background: linear-gradient(45deg, rgb(255, 230, 0),rgb(255, 245, 151),rgb(122, 117, 71),rgb(61, 56, 11));
+}
+
+.card3
+{
+    grid-area: card-3;
+    background: linear-gradient(45deg, rgb(0, 255, 17),rgb(156, 255, 163),rgb(76, 125, 79),rgb(9, 64, 13));
+}
+
+.card4
+{
+    grid-area: card-4;
+    background: linear-gradient(45deg, rgb(0, 38, 255),rgb(147, 163, 255),rgb(64, 72, 113),rgb(7, 15, 61));
+}
+
+#section-2 > div > div:hover
+{
+    background-position: right;
+}
+
+/* section-3 */
+
+#section-3
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#section-3 > div
+{
+    display: grid;
+    grid-template-areas: "ca-1 ca-1 ca-1"  
+                        "ca-1 ca-1 ca-1"  
+                        "ca-1 ca-1 ca-1"
+                        "ca-2 ca-2 ca-2"
+                        "ca-2 ca-2 ca-2"
+                        "ca-2 ca-2 ca-2"
+                        "ca-3 ca-4 ca-5";               
+    grid-template-columns: repeat(3, 10vmin);
+    grid-template-rows: repeat(7, 10vmin);
+    width: repeat(3, 10vmin);
+    height: repeat(7, 10vmin);
+    margin: 0vmin 5vmin;
+    border-radius: 2vmin;
+    box-shadow: 0 0 5vmin 2vmin rgba(0,0,0,1);
+}
+
+#section-3 > div > div
+{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.car3 > p, .car4 > p, .car5 > p
+{
+    font-size: 1.5vmin;
+}
+
+.car1 
+{
+    grid-area: ca-1;
+    background-image: url("690cf62e16fb8cd50093902ba0918db9.jpg");
+    background-size: cover;
+    border-radius: 2vmin 2vmin 0vmin 0vmin;
+}
+
+.car2 
+{
+    grid-area: ca-2;
+    background: white;
+}
+
+.car2 > p
+{
+    font-size: 1.5vmin;
+}
+
+.car2 > h4
+{
+    color: black;
+}
+
+.car2 > h4 + p
+{
+    font-size: 2vmin;
+    color: rgba(122, 122, 122, 1);
+    text-align: center;
+}
+
+.RedColor
+{
+    color: red;
+}
+
+.GreenColor
+{
+    color: green;
+}
+
+.BlueColor
+{
+    color: blue;
+}
+
+.car3 
+{
+    grid-area: ca-3;
+    border-radius: 0vmin 0vmin 0vmin 2vmin;
+}
+
+.car4 
+{
+    grid-area: ca-4;
+    box-shadow: -0.2vmin 0;
+}
+
+.car5 
+{
+    grid-area: ca-5;
+    border-radius: 0vmin 0vmin 2vmin 0vmin;
+    box-shadow: -0.2vmin 0;
+}
+
+.Red
+{
+    background: red;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Green
+{
+    background: green;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Blue
+{
+    background: blue;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
