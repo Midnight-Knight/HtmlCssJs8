@@ -391,6 +391,7 @@ section
     margin: 0vmin 5vmin;
     border-radius: 2vmin;
     box-shadow: 0 0 5vmin 2vmin rgba(0,0,0,1);
+    transition: 2s;
 }
 
 #section-3 > div > div
@@ -452,6 +453,11 @@ section
     color: blue;
 }
 
+.car3, .car4, .car5
+{
+    padding-top: 25%;
+}
+
 .car3 
 {
     grid-area: ca-3;
@@ -497,3 +503,78 @@ section
     justify-content: center;
     align-items: center;
 }
+
+#section-3 > div:hover
+{
+    transform: scale(1.1);
+}
+
+/* section-4 */
+
+#section-4
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#section-4 > div
+{
+    display: grid;
+    grid-template-areas: "pict"  
+                        "cale";               
+    grid-template-columns: 40vmin;
+    grid-template-rows: 22vmin 40vmin;
+    width: 40vmin;
+    height: 62vmin;
+    box-shadow: 0 0 3vmin 1vmin;
+}
+
+.pict
+{
+    background-image: url("ps5-xbox-series-x.jpg");
+    background-size: cover;
+}
+
+.cale
+{
+    background: white;
+    display: grid;           
+    grid-template-columns: repeat(7, 5vmin);
+    grid-template-rows: repeat(6, 6vmin);
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 -0.4vmin black;
+}
+
+.cale > div
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3vh;
+    height: 4vmin;
+    margin: 1vmin;
+    color: black;
+    font-size: 2.5vmin;
+    transition: 2s;
+}
+
+.cale > .osob
+{
+    color: red;
+}
+
+.cale > div:hover
+{
+    background: black;
+    color: white;
+}
+
+.cale > .osob:hover
+{
+    background: red;
+    color: white;
+}
+
+/* section-5 */
