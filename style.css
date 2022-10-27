@@ -93,10 +93,9 @@ header
     border-top: 0.2vmin solid white;
 }
 
-footer
+.footer, footer
 {
     width: 100%;
-    height: 10vmin;
     background-color: rgb(33, 33, 33);
     display: flex;
     flex-direction: row;
@@ -165,7 +164,7 @@ nav > a:hover
 section
 {
     width: 100%;
-    height: 150vmin;
+    height: 150vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -578,3 +577,365 @@ section
 }
 
 /* section-5 */
+
+#section-5 > div
+{
+    width: 96vmin;
+    height: 42vmin;
+    display: grid;
+    grid-template-areas: "html html css css js js js js"  
+                        "html html node node react react vue vue"  
+                        "angular angular angular angular react react mongo mongo";               
+    grid-template-columns: repeat(8, 10vmin);
+    grid-template-rows: repeat(3, 12vmin);
+    grid-gap: 1vmin;
+    justify-content: center;
+}
+
+#section-5 > div > div
+{
+    border-radius: 1vmin;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: row;
+    overflow: hidden;
+}
+
+#section-5 > div > .html
+{
+    grid-area: html;
+    background-image: url("html5.jpg");
+    background-position: center;
+}
+
+#section-5 > div > .css
+{
+    grid-area: css;
+    background-image: url("css3.jpg");
+}
+
+#section-5 > div > .node
+{
+    grid-area: node;
+    background-image: url("node.jpeg");
+    background-size: 200%;
+    background-position: center;
+}
+
+#section-5 > div > .js
+{
+    grid-area: js;
+    background-image: url("js.jpeg");
+}
+
+#section-5 > div > .angular
+{
+    grid-area: angular;
+    background-image: url("angular.png");
+    
+}
+
+#section-5 > div > .react
+{
+    grid-area: react;
+    background-image: url("react.png");
+}
+
+#section-5 > div > .vue
+{
+    grid-area: vue;
+    background-image: url("vue.jpg");
+}
+
+#section-5 > div > .mongo
+{
+    grid-area: mongo;
+    background-image: url("mongo.jpg");
+}
+
+#section-5 > div > div > div
+{
+    background: linear-gradient(0deg, rgba(0,0,0,0.9), rgba(0,0,0,0.8), rgba(0,0,0,0.7), rgba(0,0,0,0.6), rgba(0,0,0,0.5), rgba(0,0,0,0.4), rgba(0,0,0,0.3), rgba(0,0,0,0.2), rgba(0,0,0,0.1), rgba(0,0,0,0));
+    opacity: 0;
+    height: 4vmin;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    transition: 2s;
+}
+
+#section-5 > div > div:hover > div
+{
+    opacity: 1;
+}
+
+#section-5 > div > div > div > p
+{
+    font-size: 1.2vmin;
+    color: white;
+    margin-left: 1vmin;
+}
+
+/* section-6 */
+
+#section-6 .container {
+    width: 80vw;
+    padding: 20px;
+    background: black;
+}
+#section-6 .container h2 {
+    width: 100%;
+    color: rgb(0, 136, 255);
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#section-6 .container .row100 {
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+#section-6 .container .row100 .col {
+    position: relative;
+    width: 100%;
+    padding: 0 1vw;
+    margin: 30px 0 1vw;
+    transition: 500ms;
+}
+
+#section-6 .container .row100 .inputBox {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    color: rgb(0, 136, 255);
+}
+
+#section-6 .container .row100 .inputBox input,
+#section-6 .container .row100 .inputBox.textarea textarea {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    outline: none;
+    font-size:  18px;
+    padding: 0 0px;
+    z-index: 1;
+    color: #000;
+}
+
+#section-6 .container .row100 .inputBox .text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: 40px;
+    font-size: 18px;
+    padding: 0 10px;
+    display: block;
+    transition: 500ms;
+    pointer-events: none;
+}
+
+#section-6 .container .row100 .inputBox input:focus + .text,
+#section-6 .container .row100 .inputBox input:hover + .text,
+#section-6 .container .row100 .inputBox input:valid + .text {
+    top: -35px;
+    left: -10px;
+}
+
+#section-6 .container .row100 .inputBox .line {
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: rgb(0, 136, 255);
+    transition: 500ms;
+    border-radius: 2px;
+    pointer-events: none;
+}
+
+#section-6 .container .row100 .inputBox input:focus ~ .line,
+#section-6 .container .row100 .inputBox input:hover ~ .line,
+#section-6 .container .row100 .inputBox input:valid ~ .line {
+    height: 100%;
+}
+
+#section-6 .container .row100 .inputBox.textarea {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    padding: 10px 0;
+}
+
+#section-6 .container .row100 .inputBox.textarea textarea {
+    height: 100%;
+    resize: none;
+}
+
+#section-6 .container .row100 .inputBox textarea:focus + .text,
+#section-6 .container .row100 .inputBox textarea:hover + .text,
+#section-6 .container .row100 .inputBox textarea:valid + .text {
+    top: -35px;
+    left: -10px;
+}
+#section-6 .container .row100 .inputBox textarea:focus ~ .line,
+#section-6 .container .row100 .inputBox textarea:hover ~ .line,
+#section-6 .container .row100 .inputBox textarea:valid ~ .line {
+    height: 100%;
+}
+#section-6 input[type="submit"] {
+    border: none;
+    padding: 7px 5px;
+    cursor: pointer;
+    outline: none;
+    background: rgb(0, 136, 255);
+    color: black;
+    font-size: 18px;
+    border-radius: 2px;
+}
+
+@media screen and (max-width:400px) {
+    #section-6 .container {
+        width: 310px;
+        padding: 20px 0px;
+    }
+    #section-6 .container .row100 .col
+    {
+        padding: 0 -1vw;
+        margin: 30px 0 -1vw;
+        width: 97%;
+    }
+    #section-6 .container .row100 .inputBox input,
+    #section-6 .container .row100 .inputBox.textarea textarea
+    {
+        width: 97%;
+    }
+    #section-6 .container .row100 .inputBox
+    {
+        width: 97%;
+    }
+
+}
+
+/* footer */
+
+.footer
+{
+    height: 10vmin;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer a
+{
+    color: white;
+}
+
+footer .container {
+    width: 97vw;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    grid-gap: 20px;
+    padding-left: 3vw;
+}
+footer .container .sec h2 {
+    position: relative;
+    color: white;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+footer .container .sec h2::before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background: rgb(0, 136, 255);
+}
+.sci {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 50px);
+    grid-gap: 10px;
+}
+.sci li {
+    list-style: none;
+}
+.sci li a {
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    background: #2b2f35;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+.sci li a:hover {
+    background: #414750;
+}
+.sci li a .fa {
+    font-size: 20px;
+}
+.quicklinks {
+    position: relative;
+}
+.quicklinks li {
+    list-style: none;
+}
+.quicklinks li a {
+    margin-bottom: 10px;
+    display: inline-block;
+}
+.quicklinks li a:hover {
+    color: rgb(0, 136, 255);
+}
+.info {
+    position: relative;
+}
+.info li {
+    display: grid;
+    grid-template-columns: 30px 1fr;
+    margin-bottom: 16px;
+}
+.info li span:nth-child(1) {
+    font-size: 20px;
+}
+.info a:hover {
+    color: rgb(0, 136, 255);
+}
+.copyrightText {
+    width: 100%;
+    background: var(--header-color);
+    padding: 8px 100px;
+    text-align: center;
+}
+
+@media screen and (max-width: 990px) {
+    footer {
+        padding: 0vw;
+    }
+    footer .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    footer .container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .copyrightText {
+        padding: 8px 40px;
+    }
+}
